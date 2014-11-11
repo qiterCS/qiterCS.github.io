@@ -5,15 +5,15 @@
   
   <title>Archives: 2014/11 | qiter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="Running to future">
 <meta property="og:type" content="website">
 <meta property="og:title" content="qiter">
 <meta property="og:url" content="http://yoursite.com/archives/2014/11/">
 <meta property="og:site_name" content="qiter">
-<meta property="og:description">
+<meta property="og:description" content="Running to future">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qiter">
-<meta name="twitter:description">
+<meta name="twitter:description" content="Running to future">
 
   
     <link rel="alternative" href="/atom.xml" title="qiter" type="application/atom+xml">
@@ -67,203 +67,74 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-搭建Hexo博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/11/搭建Hexo博客/" class="article-date">
-  <time datetime="2014-11-11T13:56:45.000Z" itemprop="datePublished">Nov 11 2014</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/11/11/搭建Hexo博客/" class="archive-article-date">
+  <time datetime="2014-11-11T13:56:45.000Z" itemprop="datePublished">11月 11</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/11/搭建Hexo博客/">搭建Hexo博客</a>
+      <a class="archive-article-title" href="/2014/11/11/搭建Hexo博客/">搭建Hexo博客</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Hexo系列：（一）搭建Hexo博客">Hexo系列：（一）搭建Hexo博客</h2>
-<p><strong>注意：</strong> 此篇教程仅针对<em>Windows</em>平台用户，目的在于帮助新手快速搭建起Hexo博客，分享经验。</p>
-<h3 id="1-_安装Git">1. 安装Git</h3>
-<ul>
-<li>Git可以把Hexo部署到github上托管，从而将自己的博客上线<br><a href="http://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html" target="_blank" rel="external">[百度经验]windows下安装git</a></li>
-</ul>
-<h3 id="2-_安装Node-js">2. 安装Node.js</h3>
-<ul>
-<li>Node.js是一个可以快速构建网络服务及应用的平台，而Hexo是由Node.js驱动的博客框架，因此这里要安装Node.js<br><a href="http://nodejs.org/" target="_blank" rel="external">Node.js下载地址</a></li>
-</ul>
-<h3 id="3-_安装Hexo">3. 安装Hexo</h3>
-<ul>
-<li><p>前边如果我们已经成功安装好git，那么我们现在在桌面空白位置右键单击，菜单中出现Git Bash，点进去，这是Git的命令行环境，接着输入:</p>
-<pre><code>  npm <span class="operator"><span class="keyword">install</span> -g hexo</span>
-</code></pre></li>
-</ul>
-<h3 id="4-_配置Hexo环境">4. 配置Hexo环境</h3>
-<ul>
-<li>在自己喜欢的地方建立一个文件夹（如“<code>H:\\\\hexo</code>”）</li>
-<li><p>在该文件夹（“<code>H:\\\\hexo</code>”）中空白处右键，进入Git Bash，执行以下命令即可自动在文件夹中建立网站所需要的所有文件：</p>
-<pre><code>  hexo <span class="keyword">init</span>
-</code></pre></li>
-<li><p>安装依赖包：</p>
-<pre><code>  npm <span class="operator"><span class="keyword">install</span></span>
-</code></pre></li>
-</ul>
-<h3 id="5-_本地查看">5. 本地查看</h3>
-<ul>
-<li><p>执行更新指令指令：</p>
-<pre><code>  hexo <span class="keyword">generate</span>
-</code></pre></li>
-<li><p>执行服务启动指令：</p>
-<pre><code>  hexo <span class="keyword">server</span>
-</code></pre></li>
-<li><p>至此，本地的Hexo博客已经搭建完毕，我们在浏览器地址栏中输入<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a>即可查看到搭建好的博客</p>
-</li>
-</ul>
-<h3 id="6-_Hexo博客上线">6. Hexo博客上线</h3>
-<ul>
-<li>接下来我们要将本地搭建好的Hexo上线，最简单经济的方法是部署至GitHub，实现Github的自动托管</li>
-<li>首先注册（Sign Up）一个<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号，并建立一个新的仓库（New Repositories）：<br><img src="/img/Repositories.png" alt="在GitHub中建立一个新的Repositories"></li>
-<li>请注意仓库的命名是有规则的，形式为<code>帐号名.github.io</code>，如下图所示：<br><img src="/img/io.png" alt="username.github.io"></li>
-<li>接着我们要进入文件夹“H:\\hexo”修改Hexo的整体配置文件<code>_config.yml</code>，拉到最底，将相应的上传（Depoly）配置代码替换为以下形式：<br><img src="/img/deploy.png" alt="Deploy"></li>
-<li>其中<code>repository</code>的地址进入GitHub中我们之前建立好的那个仓库中就能复制来：<br><img src="/img/qiterCS.github.io.png" alt="Alt text"></li>
-<li><p>继续，我们再次更新文件：</p>
-<pre><code>  hexo <span class="keyword">generate</span>
-</code></pre></li>
-<li><p>上传博客：</p>
-<pre><code>  <span class="title">hexo</span> deploy
-</code></pre></li>
-<li>OK，你的Hexo博客至此已经完全搭建成功，在浏览器中输入<code>帐号名.github.io</code>就可查看到（本文是<code>qiterCS.github.io</code>）</li>
-</ul>
-<h4 id="注意："><em>注意：</em></h4>
-<p><em>- 每次运行命令（<code>hexo generate</code>等）都须在<code>hexo</code>文件夹下；</em><br><em>- 每次修改完<code>Hexo</code>都要执行命令<code>hexo generate</code>进行文件更新才能生效</em>；</p>
-<h4 id="小技巧："><strong><em>小技巧：</em></strong></h4>
-<ul>
-<li>命令简写<pre><code>  hexo <span class="variable">g  =</span>=  hexo generate  （更新文件）
-  hexo <span class="variable">d  =</span>=  hexo depoly    （上传文件）
-  hexo <span class="variable">n  =</span>=  hexo new       （新建博文）
-  hexo <span class="variable">s  =</span>=  hexo server    （本地启动）
-</code></pre></li>
-<li>新建的博客（Post）在<code>H:\\hexo\source\_posts</code>文件夹下，编辑相应的<code>***.md</code>修改博文，本篇用的编辑器是<a href="http://maxiang.info/" target="_blank" rel="external">MarkDown</a></li>
-</ul>
-<blockquote>
-<p><a href="http://zipperary.com/" target="_blank" rel="external">本篇教程参考自zipperary的博客，非常感谢他的分享！</a></p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/11/搭建Hexo博客/" data-id="so60bdf05w5vjvaz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/-object-Object/">[object Object]</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-Start" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/10/Start/" class="article-date">
-  <time datetime="2014-11-10T05:28:54.000Z" itemprop="datePublished">Nov 10 2014</time>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/11/10/Start/" class="archive-article-date">
+  <time datetime="2014-11-10T05:28:54.000Z" itemprop="datePublished">11月 10</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/10/Start/">Start</a>
+      <a class="archive-article-title" href="/2014/11/10/Start/">Start</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><strong> Hello everyone！</strong></strong><br>Welcome to my first hexo on Internet. I’m a CSer studying in Beijing now, this will be a beginning of my blog.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo Qiter <span class="string">"My First Post"</span></div></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/10/Start/" data-id="nlmuuxujt6718nas" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/10/hello-world/" class="article-date">
-  <time datetime="2014-11-10T03:58:29.000Z" itemprop="datePublished">Nov 10 2014</time>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/11/10/hello-world/" class="archive-article-date">
+  <time datetime="2014-11-10T03:58:29.000Z" itemprop="datePublished">11月 10</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/10/hello-world/">Hello World</a>
+      <a class="archive-article-title" href="/2014/11/10/hello-world/">Hello World</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/10/hello-world/" data-id="3d9895xs83vhgemh" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
+  
+    </div></section>
   
 </section>
         
